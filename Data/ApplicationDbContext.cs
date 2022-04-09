@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using DictionaryWebApp.Models;
 
 namespace DictionaryWebApp.Data
 {
@@ -12,5 +13,6 @@ namespace DictionaryWebApp.Data
             : base(options)
         {
         }
+        public DbSet<DictionaryWebApp.Models.Word> Word { get; set; }
     }
 }

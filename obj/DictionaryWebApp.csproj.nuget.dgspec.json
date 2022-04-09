@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kari/Desktop/Web App/Dictionary-WebApp/DictionaryWebApp.csproj": {}
+    "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
   },
   "projects": {
-    "/Users/kari/Desktop/Web App/Dictionary-WebApp/DictionaryWebApp.csproj": {
+    "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kari/Desktop/Web App/Dictionary-WebApp/DictionaryWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
         "projectName": "DictionaryWebApp",
-        "projectPath": "/Users/kari/Desktop/Web App/Dictionary-WebApp/DictionaryWebApp.csproj",
-        "packagesPath": "/Users/kari/.nuget/packages/",
-        "outputPath": "/Users/kari/Desktop/Web App/Dictionary-WebApp/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kari/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,11 +54,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.22, )"
+              "version": "[3.1.23, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.22, )"
+              "version": "[3.1.23, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -77,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
