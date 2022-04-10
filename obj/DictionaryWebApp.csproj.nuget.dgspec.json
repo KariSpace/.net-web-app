@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
+    "/Users/kari/Desktop/Dictionary APP/Dictionary-WebApp/DictionaryWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
+    "/Users/kari/Desktop/Dictionary APP/Dictionary-WebApp/DictionaryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "projectUniqueName": "/Users/kari/Desktop/Dictionary APP/Dictionary-WebApp/DictionaryWebApp.csproj",
         "projectName": "DictionaryWebApp",
-        "projectPath": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\DictionaryWebApp\\Dictionary-WebApp\\obj\\",
+        "projectPath": "/Users/kari/Desktop/Dictionary APP/Dictionary-WebApp/DictionaryWebApp.csproj",
+        "packagesPath": "/Users/kari/.nuget/packages/",
+        "outputPath": "/Users/kari/Desktop/Dictionary APP/Dictionary-WebApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kari/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

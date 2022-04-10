@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DictionaryWebApp.Data;
 using DictionaryWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DictionaryWebApp.Controllers
 {
@@ -34,6 +35,7 @@ namespace DictionaryWebApp.Controllers
         // POST: Words/ShowSearchResults
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
+            ViewBag.SearchQuery = SearchPhrase;
             return View("Index", await _context.Word.Where(w => (w.WordText.Contains(SearchPhrase) || w.WordTranslate.Contains(SearchPhrase))).ToListAsync());
         }
 
@@ -56,6 +58,8 @@ namespace DictionaryWebApp.Controllers
         }
 
         // GET: Words/Create
+
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -64,6 +68,7 @@ namespace DictionaryWebApp.Controllers
         // POST: Words/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,WordText,WordMeaning,WordTranslate,WordUsageExample")] Word word)
@@ -78,6 +83,7 @@ namespace DictionaryWebApp.Controllers
         }
 
         // GET: Words/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,6 +102,7 @@ namespace DictionaryWebApp.Controllers
         // POST: Words/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,WordText,WordMeaning,WordTranslate,WordUsageExample")] Word word)
@@ -129,6 +136,7 @@ namespace DictionaryWebApp.Controllers
         }
 
         // GET: Words/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -147,6 +155,7 @@ namespace DictionaryWebApp.Controllers
         }
 
         // POST: Words/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
