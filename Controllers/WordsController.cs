@@ -35,7 +35,7 @@ namespace DictionaryWebApp.Controllers
         // POST: Words/ShowSearchResults
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
-            ViewBag.SearchQuery = SearchPhrase;
+            ViewBag.SearchQuery = "Search result for: " + SearchPhrase;
             return View("Index", await _context.Word.Where(w => (w.WordText.Contains(SearchPhrase) || w.WordTranslate.Contains(SearchPhrase))).ToListAsync());
         }
 
