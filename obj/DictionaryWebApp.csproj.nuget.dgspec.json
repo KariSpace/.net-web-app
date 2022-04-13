@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\1\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
+    "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\1\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
+    "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\1\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
         "projectName": "DictionaryWebApp",
-        "projectPath": "C:\\Users\\User\\Desktop\\1\\Dictionary-WebApp\\DictionaryWebApp.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\1\\Dictionary-WebApp\\obj\\",
+        "projectPath": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "packagesPath": "C:\\Users\\Лиза\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Лиза\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
