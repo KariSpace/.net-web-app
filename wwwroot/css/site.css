@@ -78,7 +78,11 @@ body {
     background-color: #1b1b1b;
     color: #fff;
     height:70vh;
+
     
+}
+.pb-3 {
+    overflow: hidden;
 }
 footer {
     bottom: 0;
@@ -100,17 +104,26 @@ header {
     background: #000!important;
     
 }
+.text-center {
+    width: 50%;
+    padding-right: 50px;
+}
 .text-center p {
-    padding-top:100px;
+
     text-align: left;
+}
+.img-center{
+    width: 50%
 }
 .main-info {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    margin: 0 80px;
 }
     .main-info img {
-        max-height: 300px;
+        
     }
 .table {
     color: white;
@@ -141,10 +154,10 @@ h1 {
 .display-4 {
     font-size: 60px;
     text-align: left;
-    padding-top: 150px;
+    padding-top: 30px;
     color: white;
     background: none;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
 }
 tr:hover {
   

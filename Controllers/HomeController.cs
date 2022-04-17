@@ -26,18 +26,23 @@ namespace DictionaryWebApp.Controllers
             var rnd = new Random();
             var WordsList = _context.Word.Select(x => x.WordText).ToList();
             var idx = 0;
-            if (WordsList.Count != 0)
-            { 
+            if (WordsList.Count != 0){ 
+                
                 idx = rnd.Next(0, WordsList.Count - 1);
                 var WordsDict = WordsList.ToDictionary(x => WordsList.IndexOf(x));
-                ViewBag.RandomWord = "Word of the day: " + WordsDict[idx];
+                ViewBag.RandomWord =  WordsDict[idx];
                 var WordsTranslationList = _context.Word.Select(x => x.WordTranslate).ToList();
                 var WordsTranslationDict = WordsTranslationList.ToDictionary(x => WordsTranslationList.IndexOf(x));
                 ViewBag.RandomWordTranslation = "Translation: " + WordsTranslationDict[idx];
-            }
-            ViewBag.RandomWord = "";
-            ViewBag.RandomWordTranslation = "";
+                var WordsMeaningList = _context.Word.Select(x => x.WordMeaning).ToList();
+                var WordsMeaningDict = WordsMeaningList.ToDictionary(x => WordsMeaningList.IndexOf(x));
+                ViewBag.RandomWordMeaning = WordsMeaningDict[idx];
 
+            }
+            else { 
+                ViewBag.RandomWord = "Welcome to Dictionary Web App";
+                ViewBag.RandomWordTranslation = "";
+            }
             return View();
         }
 
