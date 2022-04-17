@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
+    "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
+    "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj",
         "projectName": "DictionaryWebApp",
-        "projectPath": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\DictionaryWebApp.csproj",
-        "packagesPath": "C:\\Users\\Лиза\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Лиза\\OneDrive\\Рабочий стол\\Dictionary-WebApp\\Dictionary-WebApp\\obj\\",
+        "projectPath": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "packagesPath": "C:\\Users\\kpivt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Лиза\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kpivt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
