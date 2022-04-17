@@ -35,6 +35,12 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.WordUsageExample)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Language.LanguageName)
+        </dd class>
     </dl>
     
     <form asp-action="Delete">

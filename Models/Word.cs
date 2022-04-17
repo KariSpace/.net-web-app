@@ -16,6 +16,9 @@ namespace DictionaryWebApp.Models
         [Required]
         public string WordUsageExample { get; set; }
 
+        public int LanguageID { get; set; }
+        [Required]
+        public virtual Language Language { get; set; }
         public Word()
         {
 

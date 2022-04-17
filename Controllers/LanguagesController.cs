@@ -11,34 +11,22 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace DictionaryWebApp.Controllers
 {
-    public class WordsController : Controller
+    public class LanguagesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public WordsController(ApplicationDbContext context)
+        public LanguagesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        
-        // GET: Words
+
+        // GET: Languages
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Word.Include(w => w.Language);
-            return View(await applicationDbContext.ToListAsync());
-        }
-        // GET: Words/ShowSearchForm
-        public async Task<IActionResult> ShowSearchForm()
-        {
-            return View();
+            return View(await _context.Language.ToListAsync());
         }
 
-        // POST: Words/ShowSearchResults
-        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
-        {
-            ViewBag.SearchQuery = "Search result for: " + SearchPhrase;
-            return View("Index", await _context.Word.Where(w => (w.WordText.Contains(SearchPhrase) || w.WordTranslate.Contains(SearchPhrase))).ToListAsync());
-        }
-        // GET: Words/Details/5
+        // GET: Languages/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,43 +34,41 @@ namespace DictionaryWebApp.Controllers
                 return NotFound();
             }
 
-            var word = await _context.Word
-                .Include(w => w.Language)
+            var language = await _context.Language
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (word == null)
+            if (language == null)
             {
                 return NotFound();
             }
 
-            return View(word);
+            return View(language);
         }
+
+        // GET: Languages/Create
         [Authorize]
-        // GET: Words/Create
         public IActionResult Create()
         {
-            ViewData["LanguageID"] = new SelectList(_context.Set<Language>(), "Id", "LanguageName");
             return View();
         }
 
-        // POST: Words/Create
+        // POST: Languages/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,WordText,WordMeaning,WordTranslate,WordUsageExample,LanguageID")] Word word)
+        public async Task<IActionResult> Create([Bind("Id,LanguageName")] Language language)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(word);
+                _context.Add(language);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["LanguageID"] = new SelectList(_context.Set<Language>(), "Id", "LanguageName", word.LanguageID);
-            return View(word);
+            return View(language);
         }
 
-        // GET: Words/Edit/5
+        // GET: Languages/Edit/5
         [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -91,24 +77,23 @@ namespace DictionaryWebApp.Controllers
                 return NotFound();
             }
 
-            var word = await _context.Word.FindAsync(id);
-            if (word == null)
+            var language = await _context.Language.FindAsync(id);
+            if (language == null)
             {
                 return NotFound();
             }
-            ViewData["LanguageID"] = new SelectList(_context.Set<Language>(), "Id", "LanguageName", word.LanguageID);
-            return View(word);
+            return View(language);
         }
 
-        // POST: Words/Edit/5
+        // POST: Languages/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,WordText,WordMeaning,WordTranslate,WordUsageExample,LanguageID")] Word word)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,LanguageName")] Language language)
         {
-            if (id != word.Id)
+            if (id != language.Id)
             {
                 return NotFound();
             }
@@ -117,12 +102,12 @@ namespace DictionaryWebApp.Controllers
             {
                 try
                 {
-                    _context.Update(word);
+                    _context.Update(language);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!WordExists(word.Id))
+                    if (!LanguageExists(language.Id))
                     {
                         return NotFound();
                     }
@@ -133,11 +118,10 @@ namespace DictionaryWebApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["LanguageID"] = new SelectList(_context.Set<Language>(), "Id", "LanguageName", word.LanguageID);
-            return View(word);
+            return View(language);
         }
 
-        // GET: Words/Delete/5
+        // GET: Languages/Delete/5
         [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -146,32 +130,31 @@ namespace DictionaryWebApp.Controllers
                 return NotFound();
             }
 
-            var word = await _context.Word
-                .Include(w => w.Language)
+            var language = await _context.Language
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (word == null)
+            if (language == null)
             {
                 return NotFound();
             }
 
-            return View(word);
+            return View(language);
         }
 
-        // POST: Words/Delete/5
+        // POST: Languages/Delete/5
         [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var word = await _context.Word.FindAsync(id);
-            _context.Word.Remove(word);
+            var language = await _context.Language.FindAsync(id);
+            _context.Language.Remove(language);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool WordExists(int id)
+        private bool LanguageExists(int id)
         {
-            return _context.Word.Any(e => e.Id == id);
+            return _context.Language.Any(e => e.Id == id);
         }
     }
 }

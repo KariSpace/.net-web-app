@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
+    "C:\\Users\\kpivt\\Desktop\\d\\Dictionary-WebApp\\DictionaryWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
+    "C:\\Users\\kpivt\\Desktop\\d\\Dictionary-WebApp\\DictionaryWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\kpivt\\Desktop\\d\\Dictionary-WebApp\\DictionaryWebApp.csproj",
         "projectName": "DictionaryWebApp",
-        "projectPath": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\DictionaryWebApp.csproj",
+        "projectPath": "C:\\Users\\kpivt\\Desktop\\d\\Dictionary-WebApp\\DictionaryWebApp.csproj",
         "packagesPath": "C:\\Users\\kpivt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kpivt\\Desktop\\app\\Dictionary-WebApp\\obj\\",
+        "outputPath": "C:\\Users\\kpivt\\Desktop\\d\\Dictionary-WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kpivt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,13 +54,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.23, )"
+              "version": "[3.1.24, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.23, )"
+              "version": "[3.1.24, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

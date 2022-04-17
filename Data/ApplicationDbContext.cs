@@ -14,5 +14,6 @@ namespace DictionaryWebApp.Data
         {
         }
         public DbSet<DictionaryWebApp.Models.Word> Word { get; set; }
+        public DbSet<DictionaryWebApp.Models.Language> Language { get; set; }
     }
 }
