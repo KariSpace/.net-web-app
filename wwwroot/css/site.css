@@ -81,7 +81,6 @@ body {
     
 }
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
@@ -144,8 +143,8 @@ h1 {
     text-align: left;
     padding-top: 150px;
     color: white;
-    background:none;
-   margin-bottom: 0;
+    background: none;
+    margin-bottom: 200px;
 }
 tr:hover {
   
