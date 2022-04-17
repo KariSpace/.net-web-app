@@ -26,7 +26,7 @@ namespace DictionaryWebApp.Controllers
             var rnd = new Random();
             var WordsList = _context.Word.Select(x => x.WordText).ToList();
             var idx = 0;
-            if (WordsList.Count > 0)
+            if (WordsList.Count != 0)
             { 
                 idx = rnd.Next(0, WordsList.Count - 1);
                 var WordsDict = WordsList.ToDictionary(x => WordsList.IndexOf(x));
